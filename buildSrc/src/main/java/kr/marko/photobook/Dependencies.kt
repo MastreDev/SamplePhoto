@@ -9,6 +9,11 @@ object Versions {
 
     const val hilt = "2.46"
     const val orbit = "4.6.1"
+
+    //for Test
+    const val kotest = "5.6.2"
+    const val mockk = "1.13.5"
+    const val mockito_kotlin = "4.1.0"
 }
 
 object Libraries {
@@ -30,4 +35,15 @@ object Libraries {
 
     const val rxKotin = "io.reactivex.rxjava3:rxkotlin:3.0.1"
 
+    const val javaxInject = "javax.inject:javax.inject:1"
+
+    const val coroutineWithRx = "org.jetbrains.kotlinx:kotlinx-coroutines-rx3:1.6.4"
+
+    //for Test
+    const val kotest_jvm = "io.kotest:kotest-runner-junit5:${Versions.kotest}"
+    const val kotest_assertion = "io.kotest:kotest-assertions-core:${Versions.kotest}"
+    const val mockk_jvm = "io.mockk:mockk:${Versions.mockk}"
+    const val mockito_kotlin = "org.mockito.kotlin:mockito-kotlin:${Versions.mockito_kotlin}"
+    const val mockito_inline = "org.mockito:mockito-inline:${Versions.mockito_kotlin}"
+    const val fixture = "com.appmattus.fixture:fixture:1.2.0"
 }
