@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun handleViewEffect(viewEffect: MainViewEffect) {
         when (viewEffect) {
-            MainViewEffect.NavEditor -> {
-                findNavController(R.id.nav_host_fragment_container).navigate(HomeFragmentDirections.actionHomeFragmentToEditorGraph(EditorParams(null)))
+            is MainViewEffect.NavEditor -> {
+                findNavController(R.id.nav_host_fragment_container).navigate(HomeFragmentDirections.actionHomeFragmentToEditorGraph(viewEffect.params))
             }
         }
     }

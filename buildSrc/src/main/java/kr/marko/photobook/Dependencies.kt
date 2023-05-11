@@ -28,4 +28,6 @@ object Libraries {
     const val orbit_core = "org.orbit-mvi:orbit-viewmodel:${Versions.orbit}"
     const val orbit_test = "org.orbit-mvi:orbit-test:${Versions.orbit}"
 
+    const val rxKotin = "io.reactivex.rxjava3:rxkotlin:3.0.1"
+
 }
