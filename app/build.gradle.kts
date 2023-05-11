@@ -43,6 +43,7 @@ android {
 
 dependencies {
     implementation(project(":presentation"))
+    implementation(project(":domain"))
 
     implementation(Libraries.kotlin_reflect)
 
