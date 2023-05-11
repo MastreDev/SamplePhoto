@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editor_graph"
+    app:startDestination="@id/prepareEditorFragment">
+    <fragment
+        android:id="@+id/prepareEditorFragment"
+        android:name="kr.marko.photobook.presentation.landing.PrepareEditorFragment"
+        android:label="PrepareEditorFragment"
+        tools:layout="@layout/fragment_prepare_editor">
+        <action
+            android:id="@+id/action_prepareEditorFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment"
+            app:popUpTo="@id/prepareEditorFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_prepareEditorFragment_to_sketchFragment"
+            app:destination="@id/sketchFragment"
+            app:popUpTo="@id/prepareEditorFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="editor_params"
+            app:argType="kr.marko.photobook.presentation.protocol.EditorParams" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="kr.marko.photobook.presentation.gallery.GalleryFragment"
+        android:label="GalleryFragment"
+        tools:layout="@layout/fragment_gallery"/>
+    <fragment
+        android:id="@+id/sketchFragment"
+        android:name="kr.marko.photobook.presentation.sketch.SketchFragment"
+        android:label="SketchFragment"
+        tools:layout="@layout/fragment_sketch"/>
+</navigation>
