@@ -18,8 +18,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private val vm by activityViewModels<MainViewModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.tvWelcome.setOnClickListener {
-            vm.onClickWelcomeText()
+        binding.btnCreateProduct.setOnClickListener {
+            vm.onClickCreateProduct()
+        }
+        binding.btnLoadProject.setOnClickListener {
+            vm.onClickLoadProject()
         }
     }
 }
