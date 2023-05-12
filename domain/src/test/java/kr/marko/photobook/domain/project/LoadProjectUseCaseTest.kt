@@ -104,10 +104,6 @@ class LoadProjectUseCaseTest : FunSpec({
 })
 
 data class FakeProjectOptionParams(
-    override val deviceId: String,
-    override val userNo: String,
-    override val productCode: String,
-    override val templateCode: String,
     override val glossyType: String?,
     override val paperCode: String,
     override val quantity: Int,

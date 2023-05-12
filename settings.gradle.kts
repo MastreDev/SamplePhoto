@@ -17,3 +17,4 @@ rootProject.name = "Photobook"
 include(":app")
 include(":presentation")
 include(":domain")
+include(":data")

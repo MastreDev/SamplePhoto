@@ -35,6 +35,9 @@ android {
     buildFeatures{
         viewBinding = true
     }
+    tasks.withType<Test>().configureEach {
+        useJUnitPlatform()
+    }
 }
 
 dependencies {
@@ -58,7 +61,15 @@ dependencies {
     //orbit
     implementation(Libraries.orbit_core)
 
-    testImplementation("junit:junit:4.13.2")
+    //Coroutine with Rx
+    implementation(Libraries.coroutineWithRx)
+
+    testImplementation(Libraries.kotest_jvm)
+    testImplementation(Libraries.kotest_assertion)
+    testImplementation(Libraries.mockito_kotlin)
+    testImplementation(Libraries.mockito_inline)
+    testImplementation(Libraries.fixture)
+    testImplementation(Libraries.orbit_test)
 
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

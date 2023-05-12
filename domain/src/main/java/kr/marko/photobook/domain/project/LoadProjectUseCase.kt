@@ -8,11 +8,8 @@ import javax.inject.Inject
 class LoadProjectUseCase @Inject constructor(private val repository: ProjectRepository) : SingleUseCase<LoadProjectUseCase.Params, Project> {
 
     override fun invoke(params: Params): Single<Project> {
-        require(params.projectCode != null || params.projectOptionCreateData != null) {
-            "Both projectCode and projectOptionCreateData cannot be null."
-        }
-
         return if (params.projectCode == null) {
+            require(params.projectOptionCreateData != null) { "projectOptionCreateData cannot be null." }
             Single.zip(
                 repository.createProjectOption(params.projectOptionCreateData),
                 repository.getProductInfo(),
