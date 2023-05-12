@@ -14,7 +14,11 @@ data class Initialized<out T>(private val value: T) : Late<T>(value = value) {
 
 }
 
-fun <T> T.asInit(): Initialized<T> {
+fun <T> T?.asInit(default: T? = null): Late<T> {
+    return default?.asInit() ?: this?.asInit() ?: Uninitialized
+}
+
+private fun <T> T.asInit(): Initialized<T> {
     return Initialized(this)
 }
 

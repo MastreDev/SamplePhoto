@@ -19,11 +19,28 @@ class MainViewModel @AssistedInject constructor(
     override val container: Container<MainViewState, MainViewEffect> = container(initState)
 
     fun onClickCreateProduct() = intent {
-        postSideEffect(MainViewEffect.NavEditor(CreateProductOptions(productCode = "140252")))
+        val editorParams = CreateProductOptions(
+            productCode = "140252",
+            sizeCode = "",
+            projectAccessoryParams = "",
+            inflowLocation = "",
+            templateCode = "",
+            glossyType = "",
+            paperCode = "",
+            quantity = 1,
+            calendarStartDate = "",
+            calendarEndDate = "",
+            sizeQuantitys = "",
+            frameCode = "",
+            frameType = "",
+            colorCode = "",
+            backType = ""
+        )
+        postSideEffect(MainViewEffect.NavEditor(editorParams))
     }
 
     fun onClickLoadProject() = intent {
-        postSideEffect(MainViewEffect.NavEditor(CartProductOptions(projectCode = "20302030")))
+        postSideEffect(MainViewEffect.NavEditor(CartProductOptions(projectCode = "20302030", productCode = "140252", templateCode = "234252")))
     }
 
     @AssistedFactory

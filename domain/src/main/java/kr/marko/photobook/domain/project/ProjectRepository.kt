@@ -7,7 +7,7 @@ import kr.marko.photobook.domain.save.Save
 
 interface ProjectRepository {
 
-    fun createProjectOption(recipe: ProjectOption.Params?): Single<ProjectOption>
+    fun createProjectOption(recipe: ProjectOption.Params): Single<ProjectOption>
 
     fun getProjectOption(projectCode: String): Single<ProjectOption>
 

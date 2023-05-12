@@ -1,4 +1,4 @@
-package kr.marko.photobook.presentation
+package kr.marko.photobook.data
 
 import org.junit.Test
 
