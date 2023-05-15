@@ -2,7 +2,9 @@ name: PR Test
 
 on:
   pull_request:
-    branches:[ master, develop ] # master and develop
+    branches:
+      -'master'
+      -'develop'
 
 jobs:
   test:
