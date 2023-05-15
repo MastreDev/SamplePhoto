@@ -1,4 +1,4 @@
-package kr.marko.photobook.presentation.mvi
+package kr.marko.photobook.domain
 
 sealed class Late<out T>(private val value: T?) {
 

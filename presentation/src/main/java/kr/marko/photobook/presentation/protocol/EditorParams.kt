@@ -7,4 +7,5 @@ interface EditorParams : Parcelable, ProjectOption.Params {
     val projectCode: String?
     val productCode: String
     val templateCode: String
+    val createTime: Long
 }
