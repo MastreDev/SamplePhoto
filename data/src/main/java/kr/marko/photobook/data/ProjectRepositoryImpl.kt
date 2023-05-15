@@ -8,7 +8,7 @@ import kr.marko.photobook.domain.project.ProjectRepository
 import kr.marko.photobook.domain.save.Save
 import javax.inject.Inject
 
-class ProjectRepositoryImpl @Inject constructor(): ProjectRepository {
+class ProjectRepositoryImpl @Inject constructor() : ProjectRepository {
 
     override fun createProjectOption(recipe: ProjectOption.Params): Single<ProjectOption> {
         return Single.just(ProjectOption("1234"))
@@ -29,5 +29,4 @@ class ProjectRepositoryImpl @Inject constructor(): ProjectRepository {
     override fun getSave(projectCode: String): Single<Save> {
         return Single.just(Save())
     }
-
 }

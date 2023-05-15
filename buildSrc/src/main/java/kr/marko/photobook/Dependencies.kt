@@ -5,6 +5,7 @@ object Versions {
     const val androidx_splashScreen = "1.0.0-beta02"
     const val androidx_nav = "2.5.3"
 
+    const val kotlin_coroutines = "1.7.0"
     const val kotlin_reflect = "1.8.21"
 
     const val hilt = "2.46"
@@ -24,6 +25,7 @@ object Libraries {
     const val nav_ui = "androidx.navigation:navigation-ui-ktx:${Versions.androidx_nav}"
 
     const val kotlin_reflect = "org.jetbrains.kotlin:kotlin-reflect:${Versions.kotlin_reflect}"
+    const val kotlin_coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlin_coroutines}"
 
     const val viewbinding = "com.github.yogacp:android-viewbinding:1.0.4"
 
@@ -38,6 +40,8 @@ object Libraries {
     const val javaxInject = "javax.inject:javax.inject:1"
 
     const val coroutineWithRx = "org.jetbrains.kotlinx:kotlinx-coroutines-rx3:1.6.4"
+
+    const val timber = "com.jakewharton.timber:timber:5.0.1"
 
     //for Test
     const val kotest_jvm = "io.kotest:kotest-runner-junit5:${Versions.kotest}"
