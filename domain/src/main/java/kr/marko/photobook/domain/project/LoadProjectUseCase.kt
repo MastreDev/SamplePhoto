@@ -2,18 +2,17 @@ package kr.marko.photobook.domain.project
 
 import io.reactivex.rxjava3.core.Single
 import kr.marko.photobook.di.Bridged
-import kr.marko.photobook.domain.PhotoBookLogger
+import kr.marko.photobook.domain.PLog
 import kr.marko.photobook.domain.SingleUseCase
 import kr.marko.photobook.domain.save.Save
 import javax.inject.Inject
 
 class LoadProjectUseCase @Inject constructor(
     @Bridged private val repository: ProjectRepository,
-    private val log: PhotoBookLogger
 ) : SingleUseCase<LoadProjectUseCase.Params, Project> {
 
     init {
-        log.marko("LoadProjectUseCase ==>>>> : ${repository.hashCode()}")
+        PLog.marko("LoadProjectUseCase ==>>>> : ${repository.hashCode()}")
     }
 
     override fun invoke(params: Params): Single<Project> {

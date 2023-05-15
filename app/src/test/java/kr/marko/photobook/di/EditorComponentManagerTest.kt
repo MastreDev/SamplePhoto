@@ -10,6 +10,7 @@ import kr.marko.photobook.ApplicationScope
 import kr.marko.photobook.di.editorcomponent.ComponentVersion
 import kr.marko.photobook.di.editorcomponent.EditorComponentManager
 import kr.marko.photobook.di.editorcomponent.EditorSession
+import kr.marko.photobook.domain.PLog
 import kr.marko.photobook.presentation.di.EditorComponent
 import org.mockito.kotlin.doReturn
 import org.mockito.kotlin.mock
