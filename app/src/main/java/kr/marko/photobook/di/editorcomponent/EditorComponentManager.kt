@@ -7,9 +7,9 @@ import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 import kr.marko.photobook.ApplicationScope
 import kr.marko.photobook.domain.Late
+import kr.marko.photobook.domain.PLog
 import kr.marko.photobook.presentation.di.EditorComponent
 import kr.marko.photobook.presentation.protocol.EditorParams
-import timber.log.Timber
 import java.util.concurrent.atomic.AtomicInteger
 import javax.inject.Provider
 
@@ -22,7 +22,7 @@ class EditorComponentManager(
     private val _versionState = MutableStateFlow(ComponentVersion.next())
     val versionState = _versionState.asStateFlow()
 
-    private var editorComponent: EditorComponent = componentProvider.get().build().also { Timber.tag("#Marko").d("Init !! $it") }
+    private var editorComponent: EditorComponent = componentProvider.get().build().also { PLog.marko("Init !! $it") }
 
     private var lastEditorParams: Late<EditorParams> = editorSession.currentEditParams.value
 
@@ -31,7 +31,7 @@ class EditorComponentManager(
             editorSession.currentEditParams
                 .filter { lastEditorParams != it }
                 .collect { editorParams ->
-                    Timber.tag("#Marko").d("Hey, Version : ${versionState.value}")
+                    PLog.marko("Hey, Version : ${versionState.value}")
                     lastEditorParams = editorParams
                     rebuildComponent()
                 }
