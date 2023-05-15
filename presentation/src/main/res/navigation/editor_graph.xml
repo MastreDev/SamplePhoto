@@ -27,7 +27,11 @@
         android:id="@+id/galleryFragment"
         android:name="kr.marko.photobook.presentation.gallery.GalleryFragment"
         android:label="GalleryFragment"
-        tools:layout="@layout/fragment_gallery"/>
+        tools:layout="@layout/fragment_gallery">
+        <action
+            android:id="@+id/action_galleryFragment_to_sketchFragment"
+            app:destination="@id/sketchFragment" />
+    </fragment>
     <fragment
         android:id="@+id/sketchFragment"
         android:name="kr.marko.photobook.presentation.sketch.SketchFragment"

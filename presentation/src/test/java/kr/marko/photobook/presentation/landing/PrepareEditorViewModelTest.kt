@@ -4,11 +4,11 @@ import com.appmattus.kotlinfixture.kotlinFixture
 import io.kotest.core.spec.style.BehaviorSpec
 import io.reactivex.rxjava3.core.Single
 import kotlinx.parcelize.Parcelize
+import kr.marko.photobook.domain.asInit
 import kr.marko.photobook.domain.error.PhotoBookException
 import kr.marko.photobook.domain.error.Reason
 import kr.marko.photobook.domain.project.LoadProjectUseCase
 import kr.marko.photobook.domain.project.Project
-import kr.marko.photobook.presentation.mvi.asInit
 import kr.marko.photobook.presentation.protocol.EditorParams
 import org.mockito.kotlin.*
 import org.orbitmvi.orbit.test
@@ -121,5 +121,6 @@ data class FakeEditorParams(
     override val inflowLocation: String?,
     override val projectCode: String?,
     override val productCode: String,
-    override val templateCode: String
+    override val templateCode: String,
+    override val createTime: Long = System.currentTimeMillis()
 ) : EditorParams

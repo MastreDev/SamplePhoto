@@ -20,5 +20,8 @@ data class CartProductOptions(
     override val backType: String? = null,
     override val sizeCode: String? = null,
     override val projectAccessoryParams: String? = null,
-    override val inflowLocation: String? = null
-) : EditorParams
+    override val inflowLocation: String? = null,
+    override val createTime: Long = System.currentTimeMillis()
+) : EditorParams {
+
+}
