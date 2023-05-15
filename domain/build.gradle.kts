@@ -28,4 +28,5 @@ dependencies {
     testImplementation(Libraries.mockito_inline)
     testImplementation(Libraries.fixture)
     testImplementation(Libraries.coroutineWithRx)
+    testRuntimeOnly(Libraries.junit5_jupiter_engine)
 }

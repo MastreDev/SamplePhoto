@@ -68,6 +68,7 @@ dependencies {
     testImplementation(Libraries.mockito_inline)
     testImplementation(Libraries.fixture)
     testImplementation(Libraries.orbit_test)
+    testRuntimeOnly(Libraries.junit5_jupiter_engine)
 
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

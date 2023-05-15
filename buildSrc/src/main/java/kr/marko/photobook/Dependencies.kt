@@ -1,5 +1,7 @@
 package kr.marko.photobook
 
+import java.lang.Runtime.Version
+
 object Versions {
     const val androidx_appcompat = "1.6.1"
     const val androidx_splashScreen = "1.0.0-beta02"
@@ -15,6 +17,7 @@ object Versions {
     const val kotest = "5.6.2"
     const val mockk = "1.13.5"
     const val mockito_kotlin = "4.1.0"
+    const val junit5 = "5.9.3"
 }
 
 object Libraries {
@@ -50,4 +53,5 @@ object Libraries {
     const val mockito_kotlin = "org.mockito.kotlin:mockito-kotlin:${Versions.mockito_kotlin}"
     const val mockito_inline = "org.mockito:mockito-inline:${Versions.mockito_kotlin}"
     const val fixture = "com.appmattus.fixture:fixture:1.2.0"
+    const val junit5_jupiter_engine ="org.junit.jupiter:junit-jupiter-engine:${Versions.junit5}"
 }
