@@ -21,4 +21,5 @@ data class CreateProductOptions(
     override val sizeCode: String?,
     override val projectAccessoryParams: String?,
     override val inflowLocation: String?,
+    override val createTime: Long = System.currentTimeMillis()
 ) : EditorParams

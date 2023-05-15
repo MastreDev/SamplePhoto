@@ -28,6 +28,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    tasks.withType<Test>().configureEach {
+        useJUnitPlatform()
+    }
 }
 
 dependencies {
@@ -35,9 +38,10 @@ dependencies {
 
     //rx
     implementation(Libraries.rxKotin)
-
     //di
     implementation(Libraries.javaxInject)
+    //timber
+    implementation(Libraries.timber)
 
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

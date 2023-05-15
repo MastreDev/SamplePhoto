@@ -15,9 +15,10 @@ tasks.withType<Test>().configureEach {
 }
 
 dependencies {
+    //coroutines
+    implementation(Libraries.kotlin_coroutines)
     //rx
     implementation(Libraries.rxKotin)
-
     //di
     implementation(Libraries.javaxInject)
 

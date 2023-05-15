@@ -5,9 +5,9 @@ import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.rx3.await
+import kr.marko.photobook.domain.asInit
 import kr.marko.photobook.domain.error.PhotoBookException
 import kr.marko.photobook.domain.project.LoadProjectUseCase
-import kr.marko.photobook.presentation.mvi.asInit
 import org.orbitmvi.orbit.Container
 import org.orbitmvi.orbit.ContainerHost
 import org.orbitmvi.orbit.syntax.simple.intent
