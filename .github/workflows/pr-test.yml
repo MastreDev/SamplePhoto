@@ -15,17 +15,17 @@ jobs:
         with:
           java-version: 8
 
-        # Grant File execute permission Gradle Wrapper
-        - name: Grant execute permission for gradlew
-          run: chmod +x gradlew
+      # Grant File execute permission Gradle Wrapper
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
 
-        # Run Gradle Test
-        - name: Test with Gradle
-          run: /.gradle --info test
+      # Run Gradle Test
+      - name: Test with Gradle
+        run: /.gradle --info test
 
-        # Publish Test Result
-        - name: Publish Unit Test Results
-          uses: EnricoMi/Publish-unit-test-result-action@v1
-          if: ${{always()}}
-          with:
-            files: build/test-results/**/*.xml
+      # Publish Test Result
+      - name: Publish Unit Test Results
+        uses: EnricoMi/Publish-unit-test-result-action@v1
+        if: ${{always()}}
+        with:
+          files: build/test-results/**/*.xml
