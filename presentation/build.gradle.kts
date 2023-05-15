@@ -50,19 +50,17 @@ dependencies {
     //navigation
     implementation(Libraries.nav_fragment)
     implementation(Libraries.nav_ui)
-
     //viewbinding util
     implementation(Libraries.viewbinding)
-
     //hilt
     implementation(Libraries.hilt_core)
     kapt(Libraries.hilt_kapt)
-
     //orbit
     implementation(Libraries.orbit_core)
-
     //Coroutine with Rx
     implementation(Libraries.coroutineWithRx)
+    //timber
+    implementation(Libraries.timber)
 
     testImplementation(Libraries.kotest_jvm)
     testImplementation(Libraries.kotest_assertion)
@@ -70,6 +68,7 @@ dependencies {
     testImplementation(Libraries.mockito_inline)
     testImplementation(Libraries.fixture)
     testImplementation(Libraries.orbit_test)
+    testRuntimeOnly(Libraries.junit5_jupiter_engine)
 
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
